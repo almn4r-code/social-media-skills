@@ -8,11 +8,11 @@ TZ_OFFSET_HOURS = "3"
 # Fill these after enabling Cloudflare Access (see README):
 # ACCESS_TEAM_DOMAIN = "your-team.cloudflareaccess.com"
 # ACCESS_AUD = "the Application Audience (AUD) tag"
-# ADMIN_EMAILS = "owner@example.com"
+ADMIN_EMAILS = "aalsuwailem@roastinghouse.sa"
 
 [[d1_databases]]
 binding = "DB"
 database_name = "roastery-planner"
 # Replace with the id printed by `npx wrangler d1 create roastery-planner`
-database_id = "00000000-0000-0000-0000-000000000000"
+database_id = "e3e228a3-8625-421d-97a3-b25510649e2a"
 migrations_dir = "migrations"

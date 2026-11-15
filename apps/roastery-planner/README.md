@@ -22,7 +22,16 @@ npm run dev          # http://localhost:8788
 npm test
 ```
 
-## النشر (مرة وحدة، تقريبًا 15 دقيقة)
+## النشر الحالي
+الأداة منشورة على https://roastery-planner.pages.dev، وقاعدة البيانات D1 اسمها `roastery-planner`.
+
+عشان تنشر أي تحديث:
+```bash
+CLOUDFLARE_ACCOUNT_ID=... CLOUDFLARE_API_TOKEN=... npm run deploy
+```
+السكربت `scripts/deploy.mjs` يجمع الواجهة والـ API في ملف worker واحد، ويضبط ربط D1 والمتغيرات من `wrangler.toml`، ويرفعها مباشرة عن طريق Cloudflare API. التوكن يحتاج صلاحية Pages: Edit.
+
+## النشر من الصفر (مرة وحدة، تقريبًا 15 دقيقة)
 1. سوّ حساب Cloudflare مجاني، وبعدين شغّل `npx wrangler login`.
 2. أنشئ قاعدة البيانات بالأمر `npx wrangler d1 create roastery-planner`، وانسخ `database_id` اللي يطلع لك في `wrangler.toml`.
 3. أنشئ الجداول بالأمر `npx wrangler d1 migrations apply roastery-planner --remote`. لا تشغّل `seed.sql` على قاعدة الإنتاج.
