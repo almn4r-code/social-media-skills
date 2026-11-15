@@ -141,3 +141,9 @@ See [tools/REGISTRY.md](tools/REGISTRY.md) for the full tool reference.
 ## License
 
 MIT — see [LICENSE](LICENSE) for details.
+
+## Apps
+
+| App | Description |
+| --- | --- |
+| [roastery-planner](apps/roastery-planner/) | Team social media content planner (Arabic, RTL) on Cloudflare Pages + D1 — calendar, Kanban, and reports on posts per campaign, product, brewing tool, and platform |
